@@ -2,6 +2,10 @@ body{
     font-family: 'Oswald', sans-serif;
 }
 
+footer{
+    color: #082B5C;
+}
+
 .login{
     background: #113D79; /* Синий цвет фона */ 
     color: #E8F1FF; /* Белые буквы */ 
@@ -9,5 +13,25 @@ body{
     font-size: 24px; /* Размер текста */
     padding: 5px 20px; /* Поля вокруг текста */
     border-radius: 20px; /* Уголки */
-    
+}
+
+.search-btn{
+    background: #E8F1FF; /* Синий цвет фона */ 
+    border: 1px solid #E8F1FF; /* Параметры рамки */
+    font-size: 24px; /* Размер текста */
+    padding: 5px 20px; /* Поля вокруг текста */
+    border-radius: 15px; /* Уголки */
+    height: 57px;
+    width: 72px;
+}
+
+.search-field{
+    background-color: #E8F1FF; /* Цвет фона */
+    color: #113D79; /* Цвет текста */
+    font-size: 24px; /* Размер текста */
+    border: 1px solid #E8F1FF; /* Параметры рамки */
+    padding: 0px 10px; /* Поля вокруг текста */
+    border-radius: 15px; /* Уголки */
+    width: 247px;
+    height: 57px;
 }
