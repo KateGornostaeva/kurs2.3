@@ -1,0 +1,13 @@
+body{
+    font-family: 'Oswald', sans-serif;
+}
+
+.login{
+    background: #113D79; /* Синий цвет фона */ 
+    color: #E8F1FF; /* Белые буквы */ 
+    border: 1px solid #113D79; /* Параметры рамки */
+    font-size: 24px; /* Размер текста */
+    padding: 5px 20px; /* Поля вокруг текста */
+    border-radius: 20px; /* Уголки */
+    
+}
