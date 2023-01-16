@@ -12,19 +12,23 @@
 
     <body>
         <header>
+            <h1>Map</h1>
+            <h1>Handling</h1>
+            <h1>About us</h1>
+            <h2>User name</h2>
         </header>
         
-        <main class="body">
-            <div class="search-form">
-                <input type="text" placeholder="Поиск" class="search-field">
-                <button class="search-btn"><img src="Search.png"></button>
-            </div>
-
-            <div class="authorization">
-                <button class="login">Войти</button>
-            </div>
-
-        </main>
+        <div class = "site_page_login">
+            <form action="https://httpbin.org/post" method="post">
+                <p><h3>Войти в учетную запись</h3></p>
+                <p>Логин</p>
+                <p><input type="text" id = "login" size="40"></p>
+                <p>Пароль</p>
+                <p><input type="password" id = "password" size="40"></p>
+                <p><input type="submit" value="Войти"></p>
+                <p><input type="checkbox" id="rememberMe" name="a" value="запомнить_меня"> Запомнить меня</p>
+            </form>
+        </div>
 
         <footer class="f">
             <div class="footer">

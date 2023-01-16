@@ -1,37 +1,37 @@
 body{
     font-family: 'Oswald', sans-serif;
+    background-color: #E8F1FF;
+    color: #082B5C;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align:justify; /*выравнивание текста*/
+}
+  
+header{
+    background-color: #113D79;
+    color: #E8F1FF;
+    top: 0px;
+    margin-left: auto; /* устанавливает внешний отступ слева от элемента*/
+    margin-right: auto;
+    padding-left: 10px; /* Поля вокруг текста */
+    padding-right: 5px;
+    position: sticky;
 }
 
 footer{
-    color: #082B5C;
+    background-color: #082B5C;
+    color: #E8F1FF;
+    font-size: 16px;
+    position: static; /* Фиксированное положение */
+    left: 0; bottom: 0; /* Левый нижний угол */
+    padding-left: 5px; /* Поля вокруг текста */
+    width: 100%
 }
 
-.login{
-    background: #113D79; /* Синий цвет фона */ 
-    color: #E8F1FF; /* Белые буквы */ 
-    border: 1px solid #113D79; /* Параметры рамки */
-    font-size: 24px; /* Размер текста */
-    padding: 5px 20px; /* Поля вокруг текста */
-    border-radius: 20px; /* Уголки */
-}
-
-.search-btn{
-    background: #E8F1FF; /* Синий цвет фона */ 
-    border: 1px solid #E8F1FF; /* Параметры рамки */
-    font-size: 24px; /* Размер текста */
-    padding: 5px 20px; /* Поля вокруг текста */
-    border-radius: 15px; /* Уголки */
-    height: 57px;
-    width: 72px;
-}
-
-.search-field{
-    background-color: #E8F1FF; /* Цвет фона */
-    color: #113D79; /* Цвет текста */
-    font-size: 24px; /* Размер текста */
-    border: 1px solid #E8F1FF; /* Параметры рамки */
-    padding: 0px 10px; /* Поля вокруг текста */
-    border-radius: 15px; /* Уголки */
-    width: 247px;
-    height: 57px;
+.main{
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align:justify; /*выравнивание текста*/
 }
