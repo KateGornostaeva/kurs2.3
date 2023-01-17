@@ -6,17 +6,29 @@ body{
     margin-left: auto;
     margin-right: auto;
     text-align:justify; /*выравнивание текста*/
+    position: relative;
 }
   
 header{
     background-color: #113D79;
-    color: #E8F1FF;
     top: 0px;
-    margin-left: auto; /* устанавливает внешний отступ слева от элемента*/
-    margin-right: auto;
-    padding-left: 10px; /* Поля вокруг текста */
+    left: 0px;
+    padding-left: 100px; /* Поля вокруг текста */
     padding-right: 5px;
     position: sticky;
+    height: 112px;   
+}
+
+.main_header{
+    float: left; /*Задаем обтекание*/
+    line-height: 10px;/*Высота строки +  верт. центрирования текста*/
+    font-size: 40px;
+    color: #E8F1FF;
+    margin-top: 50px;
+    width: 250px; /*Фиксируем ширину блока*/
+    margin-right: 100px;
+    text-align: center; /*Центрируем текст по горизонтали*/
+       
 }
 
 footer{
@@ -26,7 +38,7 @@ footer{
     position: static; /* Фиксированное положение */
     left: 0; bottom: 0; /* Левый нижний угол */
     padding-left: 5px; /* Поля вокруг текста */
-    width: 100%
+    
 }
 
 .main{
@@ -34,4 +46,39 @@ footer{
     margin-left: auto;
     margin-right: auto;
     text-align:justify; /*выравнивание текста*/
+}
+
+A{
+    color: #E8F1FF;
+    text-decoration: none;
+}
+
+A:visited{
+    color: #E8F1FF;
+    text-decoration: none;
+}
+
+A:active{
+    color: #E8F1FF;
+    text-decoration: none;
+}
+
+form{
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    padding: 3px;
+    text-align:center;
+    font-size: 24px;
+}
+
+.login, .send{
+    background: #113D79; /* Синий цвет фона */ 
+    color: #E8F1FF; /* Белые буквы */ 
+    border: 1px solid #113D79; /* Параметры рамки */
+    font-size: 24px; /* Размер текста */
+    padding: 5px 20px; /* Поля вокруг текста */
+    border-radius: 20px; /* Уголки */
 }

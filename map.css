@@ -52,17 +52,6 @@ footer{
   width: 56px;
 }
 
-.map_type{
-  background: #6589C2; /* цвет фона */ 
-  border: 1px solid #6589C2; /* Параметры рамки */
-  color: #E8F1FF; /* Цвет текста */
-  font-size: 24px; /* Размер текста */
-  padding: 0px 10px; /* Поля вокруг текста */
-  border-radius: 15px; /* Уголки */
-  height: 88px;
-  width: 88px;
-}
-
 .legend{
   background-color: #082B5C;
   border-radius: 15px;
@@ -100,6 +89,21 @@ footer{
   border-radius: 15px; /* Уголки */
   height: 96px;
   width: 96px;
+}
+
+A{
+  color: #E8F1FF;
+  text-decoration: none;
+}
+
+A:visited{
+  color: #E8F1FF;
+  text-decoration: none;
+}
+
+A:active{
+  color: #E8F1FF;
+  text-decoration: none;
 }
 
 /*

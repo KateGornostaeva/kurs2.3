@@ -3,7 +3,7 @@
   <head>
     <title>kurs</title>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="main.css">  <!--подключение стилей css -->
+    <link rel="stylesheet" href="map.css">  <!--подключение стилей css -->
     <!--подключение шрифтов -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -51,10 +51,6 @@
         </div>
       </div>
 
-      <div class= "type of map">
-        <button class="map_type">Map type</button>
-      </div>
-
       <div class="legend">
         <div class="good_air">
           <p>Norm not exceeded</p>
@@ -66,7 +62,9 @@
       </div>
 
       <div class="menu">
-        <button class="menu">Menu</button>
+        <a href = "<?php $name='Menu'; $link ='main.php'; $current_page=true; echo $link;?>">
+          <?php if( $current_page ) echo $name;?> <!--второе включение PHP‐кода -->
+        </a>
       </div>
     </main>
 

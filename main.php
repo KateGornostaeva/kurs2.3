@@ -12,14 +12,38 @@
 
     <body>
         <header>
-            <h1>Map</h1>
-            <h1>Handling</h1>
-            <h1>About us</h1>
-            <h2>User name</h2>
+            <div class="main_header">
+                <a href = "<?php $name='Map'; $link ='map.php'; $current_page=true; echo $link;?>">
+                    <?php if( $current_page ) echo $name;?> <!--второе включение PHP‐кода -->
+                </a>
+            </div>
+            <div class="main_header">
+                <a href = "<?php $name='Handling'; $link ='handling.php'; $current_page=true; echo $link;?>">
+                    <?php if( $current_page ) echo $name;?> <!--второе включение PHP‐кода -->
+                </a>
+            </div>
+            <div class="main_header">
+                <a href = "<?php $name='About us'; $link ='main.php'; $current_page=true; echo $link;?>">
+                    <?php if( $current_page ) echo $name;?> <!--второе включение PHP‐кода -->
+                </a>
+            </div>
+            <div class="main_header">  
+                <a href = "<?php $name='Log in'; $link ='login.php'; $current_page=true; echo $link;?>">
+                    <?php if( $current_page ) echo $name;?> <!--второе включение PHP‐кода -->
+                </a>
+            </div>        
         </header>
         
         <main class="main">
-            <h3>Pollutants</h3>
+            <h3>Air pollution in different districts of Moscow</h3>
+            <p>
+                Air pollution has severe health consequences – one third of deaths from stroke, lung cancer and heart disease are attributable 
+                to air pollution.
+            </p>
+            <p>
+                Our goal is to give people the opportunity to learn about the state of the air in the area where they live.
+            </p>
+            <p></p>
             <p>
                 Carbon dioxide (CO2): Because of its role as a greenhouse gas it has been described as "the leading pollutant"[87] and 
                 "the worst climate pollutant".[88] Carbon dioxide is a natural component of the atmosphere, essential for plant life and 
