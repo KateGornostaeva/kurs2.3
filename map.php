@@ -10,22 +10,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- стили карты -->
-    <!--<link
+    <link
         rel="stylesheet"
         href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
         integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
         crossorigin=""
-      />-->
+      />
       <!-- скрипт карты -->
-      <!--<script
+      <script
         src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
         integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
         crossorigin=""
-      ></script>-->
-      <!--<script src="map.js"></script>-->
-    <!--<script src="script.js"></script>-->
-      <!-- наши стили -->
-      <!--<link rel="stylesheet" href="map.css" />-->
+      ></script>
   </head>
   
   <body>
@@ -71,6 +67,7 @@
           <?php if( $current_page ) echo $name;?> <!--второе включение PHP‐кода -->
         </a></div>
       </div>
+
     </main>
 
     <footer class="f">
@@ -79,11 +76,14 @@
       </div>
     </footer>
 
-    <!-- контейнер для карты -->
-   <!-- <div id="map"></div>-->
-    <!-- кнопка для вызова функции -->
-   <!-- <button id="my_position">My Position</button>-->
-    <!-- наш скрипт-модуль -->
-    <!--<script src="script.js" type="module"></script>-->
+    <div class="map_m">
+      <!-- контейнер для карты -->
+        <div id="map_r"></div>
+      <!-- кнопка для вызова функции -->
+        <button id="my_position">My Position</button>
+      <!-- наш скрипт-модуль -->
+        <script src="script.js" type="module"></script>
+    </div>
+    
   </body> 
 </html>
