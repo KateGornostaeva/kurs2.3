@@ -28,10 +28,10 @@
                 </a>
             </div>
             <div class="main_header">  
-                <a href = "<?php $name='Log in'; $link ='login.php'; $current_page=true; echo $link;?>">
+                <a href = "<?php $name='Sign in'; $link ='login.php'; $current_page=true; echo $link;?>">
                     <?php if( $current_page ) echo $name;?> <!--второе включение PHP‐кода -->
                 </a>
-            </div>        
+            </div>         
         </header>
 
         <?php

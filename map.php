@@ -39,7 +39,9 @@
       </div>
 
       <div class="authorization">
-        <button class="login">Log in</button>
+        <a href = "<?php $name='Sign in'; $link ='login.php'; $current_page=true; echo $link;?>">
+          <?php if( $current_page ) echo $name;?> <!--второе включение PHP‐кода -->
+        </a>
       </div>
 
       <div class="zoom">
@@ -53,18 +55,21 @@
 
       <div class="legend">
         <div class="good_air">
-          <p>Norm not exceeded</p>
+          <div class="good_air_text"><p>Norm not exceeded</p></div>
         </div>
         <div class="bad_air">
-          <p>Norm is exceeded</p>
+          <div class="bad_air_text"><p>Norm is exceeded</p></div>
         </div>
-        <p><input type="checkbox" id="switch on off" name="checkbox" value="Display air quality">Display air quality</p>
+        <div class="switch_on_off">
+          <div class="switch_on_off_text"><p>Display air quality</p></div>
+          <div class="switch_img"><img src="Done.png"></div>
+        </div>
       </div>
 
       <div class="menu">
-        <a href = "<?php $name='Menu'; $link ='main.php'; $current_page=true; echo $link;?>">
+        <div class="menu_text"><a href = "<?php $name='Main page'; $link ='main.php'; $current_page=true; echo $link;?>">
           <?php if( $current_page ) echo $name;?> <!--второе включение PHP‐кода -->
-        </a>
+        </a></div>
       </div>
     </main>
 

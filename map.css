@@ -5,19 +5,31 @@ body{
 
 footer{
   color: #082B5C;
+  font-size: 16px;
+  position: fixed; /* Фиксированное положение */
+  right: 0; bottom: 0; /* Левый нижний угол */
+  padding-right: 5px; /* Поля вокруг текста */
+  z-index: 1;
 }
 
 .body_buttons{
  z-index: 1;
 }
 
-.login{
+.authorization{
   background: #113D79; /* Синий цвет фона */ 
   color: #E8F1FF; /* Белые буквы */ 
   border: 1px solid #113D79; /* Параметры рамки */
   font-size: 24px; /* Размер текста */
   padding: 5px 20px; /* Поля вокруг текста */
   border-radius: 20px; /* Уголки */
+  position: fixed; /* Фиксированное положение */
+  right: 26px; top: 25px; /* Левый нижний угол */
+}
+
+.search-form{
+  position: fixed; /* Фиксированное положение */
+  left: 26px; top: 15px; /* Левый нижний угол */
 }
 
 .search-btn{
@@ -46,10 +58,20 @@ footer{
   border: 1px solid #E8F1FF; /* Параметры рамки */
   color: #113D79; /* Цвет текста */
   font-size: 44px; /* Размер текста */
-  padding: 0px 10px; /* Поля вокруг текста */
+  text-align: center;
   border-radius: 15px; /* Уголки */
   height: 56px;
   width: 56px;
+}
+
+.plus{
+  position: fixed; /* Фиксированное положение */
+  right: 26px; top: 280px; /* Левый нижний угол */
+}
+
+.minus{
+  position: fixed; /* Фиксированное положение */
+  right: 26px; top: 345px; /* Левый нижний угол */
 }
 
 .legend{
@@ -60,10 +82,33 @@ footer{
   padding: 0px 10px; /* Поля вокруг текста */
   height: 59px;
   width: 1261px;
+  position: fixed; /* Фиксированное положение */
+  left: 26px; bottom: 47px; /* Левый нижний угол */
 }
 
-.legend div{
+.good_air_text{
+  position: fixed; /* Фиксированное положение */
+  left: 93px; bottom: 35px; /* Левый нижний угол */
+}
 
+.bad_air_text{
+  position: fixed; /* Фиксированное положение */
+  left: 383px; bottom: 35px; /* Левый нижний угол */
+}
+
+.switch_on_off{
+  border-color: #E8F1FF;
+  background-color: #E8F1FF;
+  border-radius: 10px;
+  height: 40px;
+  width: 40px;
+  position: fixed; /* Фиксированное положение */
+  left: 1250px; bottom: 57px; /* Левый нижний угол */
+}
+
+.switch_on_off_text{
+  position: fixed; /* Фиксированное положение */
+  left: 1080px; bottom: 35px; /* Левый нижний угол */
 }
 
 .good_air{
@@ -71,6 +116,8 @@ footer{
   border-radius: 10px;
   height: 40px;
   width: 40px;
+  position: fixed; /* Фиксированное положение */
+  left: 43px; bottom: 57px; /* Левый нижний угол */
 }
 
 .bad_air{
@@ -78,17 +125,24 @@ footer{
   border-radius: 10px;
   height: 40px;
   width: 40px;
+  position: fixed; /* Фиксированное положение */
+  left: 331px; bottom: 57px; /* Левый нижний угол */
 }
 
 .menu{
   background: #113D79; /* цвет фона */ 
-  border: 1px solid #113D79; /* Параметры рамки */
   color: #E8F1FF; /* Цвет текста */
   font-size: 32px; /* Размер текста */
-  padding: 0px 10px; /* Поля вокруг текста */
   border-radius: 15px; /* Уголки */
-  height: 96px;
-  width: 96px;
+  height: 66px;
+  width: 150px;
+  position: fixed; /* Фиксированное положение */
+  left: 1360px; bottom: 47px; /* Левый нижний угол */
+}
+
+.menu_text{
+  position: fixed; /* Фиксированное положение */
+  left: 1375px; bottom: 60px; /* Левый нижний угол */
 }
 
 A{
