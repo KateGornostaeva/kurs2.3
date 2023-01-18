@@ -172,11 +172,12 @@ A:active{
   box-sizing: border-box;
 }
  
-#map_r {
-  width: 1510px;
-  height: 685px;
+#map {
+  width: 1515px;
+  height: 690px;
   border-radius: 4px;
   box-shadow: 0 0 1px #222;
+  z-index: 0;
 }
     
 #my_position {
@@ -184,4 +185,5 @@ A:active{
   margin: 1em 0.5em;
   cursor: pointer;
   user-select: none;
+  z-index: 0;
 }

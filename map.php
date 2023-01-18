@@ -22,12 +22,21 @@
         integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
         crossorigin=""
       ></script>
+      <script src = "map.js"></script>
   </head>
   
   <body>
-    <header>
-    </header>
-    
+    <header></header>
+
+    <div class="map_m">
+      <!-- контейнер для карты -->
+        <div id="map"></div>
+      <!-- кнопка для вызова функции -->
+        <button id="my_position">My Position</button>
+      <!-- наш скрипт-модуль -->
+        <script src="script.js" type="module"></script>
+    </div>
+
     <main class="body_buttons">
       <div class="search-form">
         <input type="text" placeholder="Search" class="search-field">
@@ -75,15 +84,5 @@
         <p>Copyright © 2023 Kate Gornostaeva Company. All rights reserved. 
       </div>
     </footer>
-
-    <div class="map_m">
-      <!-- контейнер для карты -->
-        <div id="map_r"></div>
-      <!-- кнопка для вызова функции -->
-        <button id="my_position">My Position</button>
-      <!-- наш скрипт-модуль -->
-        <script src="script.js" type="module"></script>
-    </div>
-    
   </body> 
 </html>
