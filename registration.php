@@ -34,20 +34,18 @@
             </div>        
         </header>
         
-        <div class = "site_page_login">
+        <div class = "site_page_reg">
             <form action="https://httpbin.org/post" method="post">
-                <p><h3>Login to your account</h3></p>
+                <p><h3>Registration</h3></p>
+                <p>Name</p>
+                <p><input type="text" id = "name_user" size="40"></p>
                 <p>Login</p>
                 <p><input type="text" id = "login" size="40"></p>
                 <p>Password</p>
                 <p><input type="password" id = "password" size="40"></p>
-                <p><button class="login">Log in</button></p>
-                <!--<p><input type="submit" value="Login"></p>-->
-                <p><input type="checkbox" id="rememberMe" name="a" value="Remember_me"> Remember me</p>
-                <p><button class="reg">
-                    <a href = "<?php $name='Registration'; $link ='registration.php'; $current_page=true; echo $link;?>">
-                    <?php if( $current_page ) echo $name;?> <!--второе включение PHP‐кода --></a>
-                </button></p>
+                <p>Email</p>
+                <p><input type="text" id = "email_user" size="40"></p>
+                <p><button class="registration">Registration</button></p>
             </form>
         </div>
 

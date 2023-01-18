@@ -73,11 +73,20 @@ form{
     font-size: 24px;
 }
 
-.login, .send{
+.login, .send, .registration{
     background: #113D79; /* Синий цвет фона */ 
     color: #E8F1FF; /* Белые буквы */ 
     border: 1px solid #113D79; /* Параметры рамки */
     font-size: 24px; /* Размер текста */
     padding: 5px 20px; /* Поля вокруг текста */
     border-radius: 20px; /* Уголки */
+}
+
+.reg{
+    background: #6589C2; /* Синий цвет фона */ 
+    color: #E8F1FF; /* Белые буквы */ 
+    border: 1px solid #6589C2; /* Параметры рамки */
+    font-size: 16px; /* Размер текста */
+    padding: 5px 20px; /* Поля вокруг текста */
+    border-radius: 15px; /* Уголки */
 }
