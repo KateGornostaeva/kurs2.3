@@ -1,20 +1,46 @@
 // импортируем функцию
 import { getMap } from './map.js'
 
-// находим кнопку и добавляем к ней обработчик
-document.getElementById('my_position').onclick = () => {
+$(document).ready(function(){
   navigator.geolocation.getCurrentPosition(success, error, {
-    enableHighAccuracy: true
-  })
-}
+  enableHighAccuracy: true})
+});
 
 function success({ coords }) {
   const { latitude, longitude } = coords
   const currentPosition = [latitude, longitude]
   // вызываем функцию, передавая ей текущую позицию и сообщение
-  getMap(currentPosition, 'You are here')
+  
+  let map = getMap(currentPosition, 'You are here');
+
+  getPoints(latitude, longitude, map);
+
 }
 
 function error({ message }) {
   console.log(message)
+}
+
+function getPoints(lat, lon, map){
+  var size = 2;
+  $.getJSON('http://localhost:8080/data/area', {lat, lon, size}, function(json){
+    $.each(json, function(key, val){
+      let color;
+      let fillColor;
+      if (val.result === "GOOD"){
+        color = "#D9C8EF"; //цвета кругов
+        fillColor = "#D9C8EF"
+      }else{
+        color = "#936AC7"; //цвета кругов
+        fillColor = "#936AC7"
+      }
+      L.circle([val.lat, val.lon], {
+        color: color,
+        fillColor: fillColor,
+        fillOpacity: 0.5,//прозрачность цвета
+        radius: 100
+    }).addTo(map);  
+    })
+    
+});
 }

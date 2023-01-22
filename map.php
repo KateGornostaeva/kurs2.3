@@ -7,7 +7,8 @@
     <!--подключение шрифтов -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+        
     
     <!-- стили карты -->
     <link
@@ -22,61 +23,56 @@
         integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
         crossorigin=""
       ></script>
+      <script src = "jquery-3.6.3.min.js"></script>
       <script src = "map.js"></script>
   </head>
   
   <body>
-    <header></header>
+    <header>
+      <div class="main_header">
+        <a href = "<?php $name='Карта'; $link ='map.php'; $current_page=true; echo $link;?>">
+          <?php if( $current_page ) echo $name;?> <!--второе включение PHP‐кода -->
+        </a>
+      </div>
+      <div class="main_header">
+        <a href = "<?php $name='Заявки'; $link ='handling_page.php'; $current_page=true; echo $link;?>">
+          <?php if( $current_page ) echo $name;?> <!--второе включение PHP‐кода -->
+        </a>
+      </div>
+      <div class="main_header">
+        <a href = "<?php $name='О нас'; $link ='main.php'; $current_page=true; echo $link;?>">
+          <?php if( $current_page ) echo $name;?> <!--второе включение PHP‐кода -->
+        </a>
+      </div>
+      <div class="main_header">  
+        <a href = "<?php $name='Войти'; $link ='login.php'; $current_page=true; echo $link;?>">
+          <?php if( $current_page ) echo $name;?> <!--второе включение PHP‐кода -->
+        </a>
+      </div>        
+    </header>
 
     <div class="map_m">
       <!-- контейнер для карты -->
         <div id="map"></div>
-      <!-- кнопка для вызова функции -->
-        <button id="my_position">My Position</button>
+      <!-- кнопка для вызова функции 
+        <button id="my_position">Мое местоположение</button>-->
       <!-- наш скрипт-модуль -->
         <script src="script.js" type="module"></script>
     </div>
 
     <main class="body_buttons">
       <div class="search-form">
-        <input type="text" placeholder="Search" class="search-field">
+        <input type="text" placeholder="Поиск" class="search-field">
         <button class="search-btn"><img src="Search.png"></button>
-      </div>
-
-      <div class="authorization">
-        <a href = "<?php $name='Sign in'; $link ='login.php'; $current_page=true; echo $link;?>">
-          <?php if( $current_page ) echo $name;?> <!--второе включение PHP‐кода -->
-        </a>
-      </div>
-
-      <div class="zoom">
-        <div class="nearer">
-        <button class="plus">+</button>
-      </div>
-      <div class="farther">
-        <button class="minus">-</button>
-        </div>
       </div>
 
       <div class="legend">
         <div class="good_air">
-          <div class="good_air_text"><p>Norm not exceeded</p></div>
+          <div class="good_air_text"><p>Норма не превышена</p></div>
         </div>
         <div class="bad_air">
-          <div class="bad_air_text"><p>Norm is exceeded</p></div>
+          <div class="bad_air_text"><p>Норма превышена</p></div>
         </div>
-        <div class="switch_on_off">
-          <div class="switch_on_off_text"><p>Display air quality</p></div>
-          <div class="switch_img"><img src="Done.png"></div>
-        </div>
-      </div>
-
-      <div class="menu">
-        <div class="menu_text"><a href = "<?php $name='Main page'; $link ='main.php'; $current_page=true; echo $link;?>">
-          <?php if( $current_page ) echo $name;?> <!--второе включение PHP‐кода -->
-        </a></div>
-      </div>
-
     </main>
 
     <footer class="f">

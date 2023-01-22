@@ -1,14 +1,36 @@
 body{
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Roboto Condensed', sans-serif;
   margin: 0 auto;
+}
+
+header{
+  background-color: #113D79;
+  top: 0px;
+  left: 0px;
+  padding-left: 100px; /* Поля вокруг текста */
+  padding-right: 5px;
+  position: sticky;
+  height: 112px;   
+  z-index: 1;
+}
+
+.main_header{
+  float: left; /*Задаем обтекание*/
+  line-height: 10px;/*Высота строки +  верт. центрирования текста*/
+  font-size: 32px;
+  color: #E8F1FF;
+  margin-top: 50px;
+  width: 250px; /*Фиксируем ширину блока*/
+  margin-right: 100px;
+  text-align: center; /*Центрируем текст по горизонтали*/
 }
 
 footer{
   color: #082B5C;
   font-size: 16px;
   position: fixed; /* Фиксированное положение */
-  right: 0; bottom: 0; /* Левый нижний угол */
-  padding-right: 5px; /* Поля вокруг текста */
+  left: 15px; bottom: 0; /* Левый нижний угол */
+  padding-left: 5px; /* Поля вокруг текста */
   z-index: 1;
 }
 
@@ -16,20 +38,9 @@ footer{
  z-index: 1;
 }
 
-.authorization{
-  background: #113D79; /* Синий цвет фона */ 
-  color: #E8F1FF; /* Белые буквы */ 
-  border: 1px solid #113D79; /* Параметры рамки */
-  font-size: 24px; /* Размер текста */
-  padding: 5px 20px; /* Поля вокруг текста */
-  border-radius: 20px; /* Уголки */
-  position: fixed; /* Фиксированное положение */
-  right: 26px; top: 25px; /* Левый нижний угол */
-}
-
 .search-form{
   position: fixed; /* Фиксированное положение */
-  left: 26px; top: 15px; /* Левый нижний угол */
+  right: 15px; top: 115px; /* Левый нижний угол */
 }
 
 .search-btn{
@@ -53,27 +64,6 @@ footer{
   height: 57px;
 }
 
-.plus, .minus{
-  background: #E8F1FF; /* цвет фона */ 
-  border: 1px solid #E8F1FF; /* Параметры рамки */
-  color: #113D79; /* Цвет текста */
-  font-size: 44px; /* Размер текста */
-  text-align: center;
-  border-radius: 15px; /* Уголки */
-  height: 56px;
-  width: 56px;
-}
-
-.plus{
-  position: fixed; /* Фиксированное положение */
-  right: 26px; top: 280px; /* Левый нижний угол */
-}
-
-.minus{
-  position: fixed; /* Фиксированное положение */
-  right: 26px; top: 345px; /* Левый нижний угол */
-}
-
 .legend{
   background-color: #082B5C;
   border-radius: 15px;
@@ -81,34 +71,19 @@ footer{
   font-size: 24px; /* Размер текста */
   padding: 0px 10px; /* Поля вокруг текста */
   height: 59px;
-  width: 1261px;
+  width: 550px;
   position: fixed; /* Фиксированное положение */
-  left: 26px; bottom: 47px; /* Левый нижний угол */
+  left: 15px; bottom: 47px; /* Левый нижний угол */
 }
 
 .good_air_text{
   position: fixed; /* Фиксированное положение */
-  left: 93px; bottom: 35px; /* Левый нижний угол */
+  left: 83px; bottom: 35px; /* Левый нижний угол */
 }
 
 .bad_air_text{
   position: fixed; /* Фиксированное положение */
-  left: 383px; bottom: 35px; /* Левый нижний угол */
-}
-
-.switch_on_off{
-  border-color: #E8F1FF;
-  background-color: #E8F1FF;
-  border-radius: 10px;
-  height: 40px;
-  width: 40px;
-  position: fixed; /* Фиксированное положение */
-  left: 1250px; bottom: 57px; /* Левый нижний угол */
-}
-
-.switch_on_off_text{
-  position: fixed; /* Фиксированное положение */
-  left: 1080px; bottom: 35px; /* Левый нижний угол */
+  left: 373px; bottom: 35px; /* Левый нижний угол */
 }
 
 .good_air{
@@ -117,7 +92,7 @@ footer{
   height: 40px;
   width: 40px;
   position: fixed; /* Фиксированное положение */
-  left: 43px; bottom: 57px; /* Левый нижний угол */
+  left: 33px; bottom: 57px; /* Левый нижний угол */
 }
 
 .bad_air{
@@ -126,23 +101,7 @@ footer{
   height: 40px;
   width: 40px;
   position: fixed; /* Фиксированное положение */
-  left: 331px; bottom: 57px; /* Левый нижний угол */
-}
-
-.menu{
-  background: #113D79; /* цвет фона */ 
-  color: #E8F1FF; /* Цвет текста */
-  font-size: 32px; /* Размер текста */
-  border-radius: 15px; /* Уголки */
-  height: 66px;
-  width: 150px;
-  position: fixed; /* Фиксированное положение */
-  left: 1360px; bottom: 47px; /* Левый нижний угол */
-}
-
-.menu_text{
-  position: fixed; /* Фиксированное положение */
-  left: 1375px; bottom: 60px; /* Левый нижний угол */
+  left: 321px; bottom: 57px; /* Левый нижний угол */
 }
 
 A{
@@ -174,10 +133,12 @@ A:active{
  
 #map {
   width: 1515px;
-  height: 690px;
-  border-radius: 4px;
+  height: 620px;
+  border-radius: 0px;
   box-shadow: 0 0 1px #222;
   z-index: 0;
+  position: fixed; /* Фиксированное положение */
+  left: 0px; top: 115px; /* Левый нижний угол */
 }
     
 #my_position {
@@ -186,4 +147,5 @@ A:active{
   cursor: pointer;
   user-select: none;
   z-index: 0;
+  
 }

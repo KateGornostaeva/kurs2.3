@@ -20,5 +20,6 @@ export function getMap(position, tooltip) {
   }).addTo(map)
 
   // добавляем маркер с сообщением
-  L.marker(position).addTo(map).bindPopup(tooltip).openPopup()
+  L.marker(position).addTo(map).bindPopup(tooltip).openPopup();
+  return map;
 }

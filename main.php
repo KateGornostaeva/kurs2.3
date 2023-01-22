@@ -7,88 +7,106 @@
         <!--подключение шрифтов -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
     </head>
 
     <body>
         <header>
             <div class="main_header">
-                <a href = "<?php $name='Map'; $link ='map.php'; $current_page=true; echo $link;?>">
+                <a href = "<?php $name='Карта'; $link ='map.php'; $current_page=true; echo $link;?>">
                     <?php if( $current_page ) echo $name;?> <!--второе включение PHP‐кода -->
                 </a>
             </div>
             <div class="main_header">
-                <a href = "<?php $name='Handling'; $link ='handling.php'; $current_page=true; echo $link;?>">
+                <a href = "<?php $name='Заявки'; $link ='handling_page.php'; $current_page=true; echo $link;?>">
                     <?php if( $current_page ) echo $name;?> <!--второе включение PHP‐кода -->
                 </a>
             </div>
             <div class="main_header">
-                <a href = "<?php $name='About us'; $link ='main.php'; $current_page=true; echo $link;?>">
+                <a href = "<?php $name='О нас'; $link ='main.php'; $current_page=true; echo $link;?>">
                     <?php if( $current_page ) echo $name;?> <!--второе включение PHP‐кода -->
                 </a>
             </div>
             <div class="main_header">  
-                <a href = "<?php $name='Sign in'; $link ='login.php'; $current_page=true; echo $link;?>">
+                <a href = "<?php $name='Войти'; $link ='login.php'; $current_page=true; echo $link;?>">
                     <?php if( $current_page ) echo $name;?> <!--второе включение PHP‐кода -->
                 </a>
             </div>        
         </header>
         
         <main class="main">
-            <h3>Air pollution in different districts of Moscow</h3>
+            <h2>Информация о сайте</h2>
             <p>
-                Air pollution has severe health consequences – one third of deaths from stroke, lung cancer and heart disease are attributable 
-                to air pollution.
+                На данном сайте можно найти места на карте и узнать качество воздуха в интересующем вас месте, а также отправить заявку 
+                на исследование воздуха в месте, не отмеченном на нашей карте или там, где, как вам кажется, качество воздуха изменилось, 
+                и вы хотели бы проверить его еще раз.
+            </p>
+            <h3>Загрязнение воздуха в разных районах Москвы</h3>
+            <p>
+                Загрязнение воздуха имеет тяжелые последствия для здоровья — одна треть случаев смерти от инсульта, рака легких и 
+                сердечных заболеваний обусловлена загрязнением воздуха.
             </p>
             <p>
-                Our goal is to give people the opportunity to learn about the state of the air in the area where they live.
+                Наша цель — дать людям возможность узнать о состоянии воздуха в районе, где они живут.
             </p>
-            <p></p>
+            <h4>Виды загрязнения по характеру загрязнения атмосферы:</h4>
             <p>
-                Carbon dioxide (CO2): Because of its role as a greenhouse gas it has been described as "the leading pollutant"[87] and 
-                "the worst climate pollutant".[88] Carbon dioxide is a natural component of the atmosphere, essential for plant life and 
-                given off by the human respiratory system.[89] This question of terminology has practical effects, for example as determining 
-                whether the U.S. Clean Air Act is deemed to regulate CO2 emissions.[90] CO2 currently forms about 410 parts per million (ppm) 
-                of earth's atmosphere, compared to about 280 ppm in pre-industrial times,[91] and billions of metric tons of CO2 are emitted 
-                annually by burning of fossil fuels.[92] CO2 increase in earth's atmosphere has been accelerating.[93]
+                <ul>
+                    <li>
+                        Физическое — механическое (пыль, твердые частицы), радиоактивное (радиоактивное излучение и изотопы), электромагнитное 
+                        (различные виды электромагнитных волн, в том числе радиоволны), шумовое (различные громкие звуки и низкочастотные 
+                        колебания) и тепловое загрязнение (например, выбросы тёплого воздуха и т. п.)
+                    </li>
+                    <li>
+                        Химическое — загрязнение газообразными веществами и аэрозолями. На сегодняшний день основные химические загрязнители 
+                        атмосферного воздуха это: оксид углерода (IV), оксиды азота, диоксид серы, углеводороды, альдегиды, тяжёлые металлы 
+                        (Pb, Cu, Zn, Cd, Cr), аммиак, пыль и радиоактивные изотопы
+                    </li>
+                    <li>
+                        Биологическое — в основном загрязнение микробной природы. Например, загрязнение воздуха вегетативными формами, спорами 
+                        бактерий и грибов, вирусами, а также их токсинами и продуктами жизнедеятельности.
+                    </li>
+                </ul>
             </p>
+           
+            <h4>Основные источники загрязнения атмосферы:</h4>
             <p>
-                Sulfur oxides (SOx): particularly sulfur dioxide, a chemical compound with the formula SO2. SO2 is produced by volcanoes and 
-                in various industrial processes. Coal and petroleum often contain sulfur compounds, and their combustion generates sulfur dioxide. 
-                Further oxidation of SO2, usually in the presence of a catalyst such as NO2, forms H2SO4, and thus acid rain is formed. This is 
-                one of the causes for concern over the environmental impact of the use of these fuels as power sources.
+                <ul>
+                    <p>
+                        Природные (естественные загрязнители минерального, растительного или микробиологического происхождения, к которым относят 
+                        извержения вулканов, лесные и степные пожары, пыль, пыльцу растений, выделения животных, парниковый эффект и др.)
+                    </p>
+                    <p>Искусственные (антропогенные), которые можно разделить на несколько групп:</p>
+                    <li>
+                        Транспортные — загрязнители, образующиеся при работе автомобильного, железнодорожного, воздушного, морского и речного 
+                        транспорта;
+                    </li>
+                    <li>
+                        Производственные — загрязнители, образующиеся как выбросы при технологических процессах, отоплении;
+                    </li>
+                    <li>
+                        Бытовые — загрязнители, обусловленные сжиганием топлива в жилище и переработкой бытовых отходов.
+                    </li>
+                    <p>По составу антропогенные источники загрязнения атмосферы также можно разделить на несколько групп:</p>
+                    <li>
+                        Механические загрязнители — пыль цементных заводов, пыль от сгорания угля в котельных, топках и печах, сажа от 
+                        сгорания нефти и мазута, стирающиеся автопокрышки и т. д.;
+                    </li>
+                    <li>
+                        Химические загрязнители — пылевидные или газообразные вещества, способные вступать в химические реакции;
+                    </li>
+                    <li>
+                        Радиоактивные загрязнители.
+                    </li>
+                </ul>
             </p>
-            <p>
-                Nitrogen oxides (NOx): Nitrogen oxides, particularly nitrogen dioxide, are expelled from high temperature combustion, and are also 
-                produced during thunderstorms by electric discharge. They can be seen as a brown haze dome above or a plume downwind of cities. 
-                Nitrogen dioxide is a chemical compound with the formula NO2. It is one of several nitrogen oxides. One of the most prominent air 
-                pollutants, this reddish-brown toxic gas has a characteristic sharp, biting odor.
-            </p>    
-            <p>
-                Carbon dioxide (CO2): Because of its role as a greenhouse gas it has been described as "the leading pollutant"[87] and 
-                "the worst climate pollutant".[88] Carbon dioxide is a natural component of the atmosphere, essential for plant life and 
-                given off by the human respiratory system.[89] This question of terminology has practical effects, for example as determining 
-                whether the U.S. Clean Air Act is deemed to regulate CO2 emissions.[90] CO2 currently forms about 410 parts per million (ppm) 
-                of earth's atmosphere, compared to about 280 ppm in pre-industrial times,[91] and billions of metric tons of CO2 are emitted 
-                annually by burning of fossil fuels.[92] CO2 increase in earth's atmosphere has been accelerating.[93]
-            </p>
-            <p>
-                Sulfur oxides (SOx): particularly sulfur dioxide, a chemical compound with the formula SO2. SO2 is produced by volcanoes and 
-                in various industrial processes. Coal and petroleum often contain sulfur compounds, and their combustion generates sulfur dioxide. 
-                Further oxidation of SO2, usually in the presence of a catalyst such as NO2, forms H2SO4, and thus acid rain is formed. This is 
-                one of the causes for concern over the environmental impact of the use of these fuels as power sources.
-            </p>
-            <p>
-                Nitrogen oxides (NOx): Nitrogen oxides, particularly nitrogen dioxide, are expelled from high temperature combustion, and are also 
-                produced during thunderstorms by electric discharge. They can be seen as a brown haze dome above or a plume downwind of cities. 
-                Nitrogen dioxide is a chemical compound with the formula NO2. It is one of several nitrogen oxides. One of the most prominent air 
-                pollutants, this reddish-brown toxic gas has a characteristic sharp, biting odor.
-            </p>  
+            <p>На данном сайте используются открытая база данных с сайта data.mos.ru</p>  
         </main>
 
         <footer class="f">
             <div class="footer">
-                <p>Copyright © 2023 Kate Gornostaeva Company. All rights reserved. 
+                <p>Использованы открытые данные с сайта <a href="https://data.mos.ru/opendata/2457">data.mos.ru</a></p>
+                <p>Copyright © 2023 Kate Gornostaeva Company. All rights reserved.</p>
             </div>
         </footer>
     </body>

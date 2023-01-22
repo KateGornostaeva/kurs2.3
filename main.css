@@ -1,5 +1,5 @@
 body{
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
     background-color: #E8F1FF;
     color: #082B5C;
     width: 100%;
@@ -7,6 +7,7 @@ body{
     margin-right: auto;
     text-align:justify; /*выравнивание текста*/
     position: relative;
+    margin: 0 auto;
 }
   
 header{
@@ -22,7 +23,7 @@ header{
 .main_header{
     float: left; /*Задаем обтекание*/
     line-height: 10px;/*Высота строки +  верт. центрирования текста*/
-    font-size: 40px;
+    font-size: 32px;
     color: #E8F1FF;
     margin-top: 50px;
     width: 250px; /*Фиксируем ширину блока*/
@@ -35,9 +36,9 @@ footer{
     color: #E8F1FF;
     font-size: 16px;
     position: static; /* Фиксированное положение */
-    left: 0; bottom: 0; /* Левый нижний угол */
-    padding-left: 5px; /* Поля вокруг текста */
-    height: 30px;  
+    bottom: 0px; /* Левый нижний угол */
+    padding: 5px 10px; /* Поля вокруг текста */
+    height: 90px;  
 }
 
 .main{
@@ -73,7 +74,7 @@ form{
     font-size: 24px;
 }
 
-.login, .send, .registration{
+.login, .send, .registration, .back_handling, .handling{
     background: #113D79; /* Синий цвет фона */ 
     color: #E8F1FF; /* Белые буквы */ 
     border: 1px solid #113D79; /* Параметры рамки */
@@ -89,4 +90,28 @@ form{
     font-size: 16px; /* Размер текста */
     padding: 5px 20px; /* Поля вокруг текста */
     border-radius: 15px; /* Уголки */
+}
+
+.main_table{
+    text-align:center;
+}
+
+.table{ 
+    width: 80%; /* Ширина таблицы */
+    background-color: #6589C2;
+    border: 4px double #082B5C; /* Рамка вокруг таблицы */
+    border-collapse: collapse; /* Отображать только одинарные линии */   
+    padding: 5px 20px; /* Поля вокруг текста */ 
+    margin: 0 auto;
+}
+   
+.th{ 
+    text-align: left; /* Выравнивание по левому краю */
+    padding: 5px; /* Поля вокруг содержимого ячеек */
+    border: 1px solid #082B5C; /* Граница вокруг ячеек */
+}
+   
+.td{ 
+    padding: 5px; /* Поля вокруг содержимого ячеек */
+    border: 1px solid #082B5C; /* Граница вокруг ячеек */
 }

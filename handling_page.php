@@ -7,7 +7,7 @@
         <!--подключение шрифтов -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
     </head>
 
     <body>
@@ -33,21 +33,44 @@
                 </a>
             </div>        
         </header>
-        
-        <div class = "site_page_reg">
-            <form action="https://httpbin.org/post" method="post">
-                <p><h3>Регистарция</h3></p>
-                <p>ФИО</p>
-                <p><input type="text" id = "name_user" size="40"></p>
-                <p>Логин</p>
-                <p><input type="text" id = "login" size="40"></p>
-                <p>Пароль</p>
-                <p><input type="password" id = "password" size="40"></p>
-                <p>Email</p>
-                <p><input type="text" id = "email_user" size="40"></p>
-                <p><button class="registration">Зарегистрироваться</button></p>
-            </form>
-        </div>
+
+        <main>
+            <div class="main_table">
+                <h1>Заявки</h1>
+            
+                <div class="table">
+                    <table>
+                        <tr> 
+                            <th>&nbsp;</th><th>Имя</th>
+                            <th>Дата</th><th>Текст</th><th>Статус</th>
+                        </tr>
+                        <tr> 
+                            <td>1</td><td>Имя Фамилия Отчество</td>
+                            <td>Дата</td><td>Текст текст текст текст текст текст текст</td><td>Отправлен</td>
+                        </tr>
+                        <tr> 
+                            <td>2</td><td>29</td>
+                            <td>34</td><td>48</td><td>36</td>
+                        </tr>
+                        <tr> 
+                            <td>3</td><td>38</td>
+                            <td>57</td><td>36</td><td>36</td>
+                        </tr>
+                        <tr> 
+                            <td>4</td><td>38</td>
+                            <td>57</td><td>36</td><td>36</td>
+                        </tr>
+                    </table>
+                </div>
+                
+                <p>
+                    <button class="handling">
+                        <a href = "<?php $name='Написать заявку'; $link ='handling.php'; $current_page=true; echo $link;?>">
+                        <?php if( $current_page ) echo $name;?> <!--второе включение PHP‐кода --></a>
+                    </button>
+                </p>
+            </div>
+        </main>
 
         <footer class="f">
             <div class="footer">
@@ -57,3 +80,4 @@
         </footer>
     </body>
 </html>
+        

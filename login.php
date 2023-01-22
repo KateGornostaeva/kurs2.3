@@ -7,28 +7,28 @@
         <!--подключение шрифтов -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
     </head>
 
     <body>
         <header>
             <div class="main_header">
-                <a href = "<?php $name='Map'; $link ='map.php'; $current_page=true; echo $link;?>">
+                <a href = "<?php $name='Карта'; $link ='map.php'; $current_page=true; echo $link;?>">
                     <?php if( $current_page ) echo $name;?> <!--второе включение PHP‐кода -->
                 </a>
             </div>
             <div class="main_header">
-                <a href = "<?php $name='Handling'; $link ='handling.php'; $current_page=true; echo $link;?>">
+                <a href = "<?php $name='Заявки'; $link ='handling_page.php'; $current_page=true; echo $link;?>">
                     <?php if( $current_page ) echo $name;?> <!--второе включение PHP‐кода -->
                 </a>
             </div>
             <div class="main_header">
-                <a href = "<?php $name='About us'; $link ='main.php'; $current_page=true; echo $link;?>">
+                <a href = "<?php $name='О нас'; $link ='main.php'; $current_page=true; echo $link;?>">
                     <?php if( $current_page ) echo $name;?> <!--второе включение PHP‐кода -->
                 </a>
             </div>
             <div class="main_header">  
-                <a href = "<?php $name='Sign in'; $link ='login.php'; $current_page=true; echo $link;?>">
+                <a href = "<?php $name='Войти'; $link ='login.php'; $current_page=true; echo $link;?>">
                     <?php if( $current_page ) echo $name;?> <!--второе включение PHP‐кода -->
                 </a>
             </div>        
@@ -36,16 +36,16 @@
         
         <div class = "site_page_login">
             <form action="https://httpbin.org/post" method="post">
-                <p><h3>Login to your account</h3></p>
-                <p>Login</p>
+                <p><h3>Войти в свой аккаунт</h3></p>
+                <p>Логин</p>
                 <p><input type="text" id = "login" size="40"></p>
-                <p>Password</p>
+                <p>Пароль</p>
                 <p><input type="password" id = "password" size="40"></p>
-                <p><button class="login">Log in</button></p>
+                <p><button class="login">Войти</button></p>
                 <!--<p><input type="submit" value="Login"></p>-->
-                <p><input type="checkbox" id="rememberMe" name="a" value="Remember_me"> Remember me</p>
+                <p><input type="checkbox" id="rememberMe" name="a" value="Remember_me">Запомнить меня</p>
                 <p><button class="reg">
-                    <a href = "<?php $name='Registration'; $link ='registration.php'; $current_page=true; echo $link;?>">
+                    <a href = "<?php $name='Регистарция'; $link ='registration.php'; $current_page=true; echo $link;?>">
                     <?php if( $current_page ) echo $name;?> <!--второе включение PHP‐кода --></a>
                 </button></p>
             </form>
@@ -53,7 +53,8 @@
 
         <footer class="f">
             <div class="footer">
-                <p>Copyright © 2023 Kate Gornostaeva Company. All rights reserved. 
+                <p>Использованы открытые данные с сайта <a href="https://data.mos.ru/opendata/2457">data.mos.ru</a></p>
+                <p>Copyright © 2023 Kate Gornostaeva Company. All rights reserved.</p>
             </div>
         </footer>
     </body>
