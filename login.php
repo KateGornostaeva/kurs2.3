@@ -18,35 +18,29 @@
                 </a>
             </div>
             <div class="main_header">
-                <a href = "<?php $name='Заявки'; $link ='handling_page.php'; $current_page=true; echo $link;?>">
-                    <?php if( $current_page ) echo $name;?> <!--второе включение PHP‐кода -->
-                </a>
-            </div>
-            <div class="main_header">
                 <a href = "<?php $name='О нас'; $link ='main.php'; $current_page=true; echo $link;?>">
                     <?php if( $current_page ) echo $name;?> <!--второе включение PHP‐кода -->
                 </a>
             </div>
             <div class="main_header">  
-                <a href = "<?php $name='Войти'; $link ='login.php'; $current_page=true; echo $link;?>">
+                <a href = "<?php $name='Заявки'; $link ='login.php'; $current_page=true; echo $link;?>">
                     <?php if( $current_page ) echo $name;?> <!--второе включение PHP‐кода -->
                 </a>
             </div>        
         </header>
         
         <div class = "site_page_login">
-            <form action="https://httpbin.org/post" method="post">
+            <form method="POST" action="">
                 <p><h3>Войти в свой аккаунт</h3></p>
                 <p>Логин</p>
-                <p><input type="text" id = "login" size="40"></p>
+                <p><input type="text" name = "login" size="40"></p>
                 <p>Пароль</p>
-                <p><input type="password" id = "password" size="40"></p>
-                <p><button class="login">Войти</button></p>
-                <!--<p><input type="submit" value="Login"></p>-->
+                <p><input type="password" name = "password" size="40"></p>
+                <p><input class="login" type="submit" value="Войти"></p>
                 <p><input type="checkbox" id="rememberMe" name="a" value="Remember_me">Запомнить меня</p>
                 <p><button class="reg">
-                    <a href = "<?php $name='Регистарция'; $link ='registration.php'; $current_page=true; echo $link;?>">
-                    <?php if( $current_page ) echo $name;?> <!--второе включение PHP‐кода --></a>
+                    <a href = "<?php $name='Регистрация'; $link ='registration.php'; $current_page=true; echo $link;?>">
+                    <?php if( $current_page ) echo $name;?></a>
                 </button></p>
             </form>
         </div>
@@ -59,3 +53,29 @@
         </footer>
     </body>
 </html>
+
+<?php
+    require("connectdb.php");
+
+    if($_POST["login"] != null){
+        // Вытаскиваем из БД запись, у которой логин равняеться введенному
+        $query = mysqli_query($connect,"SELECT * FROM users WHERE login='" . $_POST["login"] . "' LIMIT 1");
+        $data = mysqli_fetch_assoc($query);
+
+        // Сравниваем пароли
+        if($data['password'] === $_POST['password']){
+            // Ставим куки
+            //setcookie("user_id", $data['id'], time()+60*60*24*30, "/*");
+            //setcookie("user_name", $$_POST['login'], time()+60*60*24*30, "/*");
+
+            // Переадресовываем браузер на страницу проверки нашего скрипта
+            session_start();
+            $_SESSION["user"] = $data;
+            header("Location: handling_page.php"); 
+            exit();
+        }
+        else{
+            echo "Вы ввели неправильный логин/пароль";
+        }
+    }
+?>

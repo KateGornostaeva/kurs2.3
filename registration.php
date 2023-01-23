@@ -5,9 +5,10 @@
         <meta charset="UTF-8">
         <link rel="stylesheet" href="main.css">  <!--подключение стилей css -->
         <!--подключение шрифтов -->
+        <!--подключение шрифтов -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
     </head>
 
     <body>
@@ -18,34 +19,30 @@
                 </a>
             </div>
             <div class="main_header">
-                <a href = "<?php $name='Заявки'; $link ='handling_page.php'; $current_page=true; echo $link;?>">
-                    <?php if( $current_page ) echo $name;?> <!--второе включение PHP‐кода -->
-                </a>
-            </div>
-            <div class="main_header">
                 <a href = "<?php $name='О нас'; $link ='main.php'; $current_page=true; echo $link;?>">
                     <?php if( $current_page ) echo $name;?> <!--второе включение PHP‐кода -->
                 </a>
             </div>
             <div class="main_header">  
-                <a href = "<?php $name='Войти'; $link ='login.php'; $current_page=true; echo $link;?>">
+                <a href = "<?php $name='Заявки'; $link ='login.php'; $current_page=true; echo $link;?>">
                     <?php if( $current_page ) echo $name;?> <!--второе включение PHP‐кода -->
                 </a>
             </div>        
         </header>
         
         <div class = "site_page_reg">
-            <form action="https://httpbin.org/post" method="post">
-                <p><h3>Регистарция</h3></p>
+            <form method="POST" action="">
+                <p><h3>Регистрация</h3></p>
                 <p>ФИО</p>
-                <p><input type="text" id = "name_user" size="40"></p>
+                <p><input type="text" name = "name_user" size="40"></p>
                 <p>Логин</p>
-                <p><input type="text" id = "login" size="40"></p>
+                <p><input type="text" name = "login" size="40"></p>
                 <p>Пароль</p>
-                <p><input type="password" id = "password" size="40"></p>
+                <p><input type="password" name = "password" size="40"></p>
                 <p>Email</p>
-                <p><input type="text" id = "email_user" size="40"></p>
-                <p><button class="registration">Зарегистрироваться</button></p>
+                <p><input type="text" name = "email_user" size="40"></p>
+
+                <p><input class="registration" type="submit" value="Зарегистрироваться"/></p>
             </form>
         </div>
 
@@ -57,3 +54,26 @@
         </footer>
     </body>
 </html>
+
+<?php
+require("connectdb.php");
+
+if($_POST["login"] != null){
+    // Вытаскиваем из БД запись, у которой логин равняеться введенному
+    $query = mysqli_query($connect,"SELECT * FROM users WHERE login='" . $_POST["login"] . "' LIMIT 1");
+    $data = mysqli_fetch_assoc($query);
+    
+    if($data['id'] == null){
+        mysqli_query(
+            $connect,
+            "INSERT INTO users (name, login, password, email) VALUES (
+                '" . $_POST['name_user'] . "',
+                '" . $_POST['login'] . "',
+                '" . $_POST["password"] . "',
+                '" . $_POST['email_user'] . ")"
+        );
+        header("Location: login.php");
+}
+}
+
+?>

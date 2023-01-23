@@ -35,17 +35,12 @@
         </a>
       </div>
       <div class="main_header">
-        <a href = "<?php $name='Заявки'; $link ='handling_page.php'; $current_page=true; echo $link;?>">
-          <?php if( $current_page ) echo $name;?> <!--второе включение PHP‐кода -->
-        </a>
-      </div>
-      <div class="main_header">
         <a href = "<?php $name='О нас'; $link ='main.php'; $current_page=true; echo $link;?>">
           <?php if( $current_page ) echo $name;?> <!--второе включение PHP‐кода -->
         </a>
       </div>
       <div class="main_header">  
-        <a href = "<?php $name='Войти'; $link ='login.php'; $current_page=true; echo $link;?>">
+        <a href = "<?php $name='Заявки'; $link ='login.php'; $current_page=true; echo $link;?>">
           <?php if( $current_page ) echo $name;?> <!--второе включение PHP‐кода -->
         </a>
       </div>        

@@ -20,7 +20,7 @@ header{
   font-size: 32px;
   color: #E8F1FF;
   margin-top: 50px;
-  width: 250px; /*Фиксируем ширину блока*/
+  width: 370px; /*Фиксируем ширину блока*/
   margin-right: 100px;
   text-align: center; /*Центрируем текст по горизонтали*/
 }
