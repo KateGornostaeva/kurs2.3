@@ -19,7 +19,7 @@
                 </a>
             </div>
             <div class="main_header">
-                <a href = "<?php $name='О нас'; $link ='main.php'; $current_page=true; echo $link;?>">
+                <a href = "<?php $name='О нас'; $link ='index.php'; $current_page=true; echo $link;?>">
                     <?php if( $current_page ) echo $name;?> <!--второе включение PHP‐кода -->
                 </a>
             </div>
