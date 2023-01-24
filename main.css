@@ -41,7 +41,7 @@ footer{
     height: 90px;  
 }
 
-.main{
+.main, .text_handling{
     width: 70%;
     margin-left: auto;
     margin-right: auto;
@@ -96,17 +96,17 @@ form{
     text-align:center;
 }
 
-.table{ 
-    width: 80%; /* Ширина таблицы */
-    background-color: #6589C2;
+table{ 
+    width: 70%; /* Ширина таблицы */
+    background-color: #a2bbe2;
     border: 4px double #082B5C; /* Рамка вокруг таблицы */
     border-collapse: collapse; /* Отображать только одинарные линии */   
     padding: 15px 20px; /* Поля вокруг текста */ 
     margin: 0 auto;
 }
    
-.th, .td{ 
-    text-align: left; /* Выравнивание по левому краю */
+th, td{ 
+    text-align: center; /* Выравнивание по левому краю */
     padding: 15px; /* Поля вокруг содержимого ячеек */
     border: 1px solid #082B5C; /* Граница вокруг ячеек */
 }

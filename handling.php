@@ -1,3 +1,7 @@
+<?php 
+include("session.php");
+?>
+
 <!DOCTYPE html>
 <html lang="ru">
     <head>
@@ -29,28 +33,16 @@
             </div>        
         </header>
 
-        <?php
-            if (isset($_GET['N'])) {$name =$_GET['N'];} else {$name='';}
-            if (isset($_GET['E'])) {$email =$_GET['E'];} else {$email='';}
-            if (isset($_GET['R'])) {$radio =$_GET['R'];} else {$radio='';}
-        ?>
-
         <div class="site_page_feedback">
-            <form action="site_answer.php" method="post" enctype="multipart/form-data">
+            <form action="" method="post">
                 <p><h3>Заявка</h3></p>
             
                 <p>Введите текст</p>
-                <p><textarea name="comment" placeholder="Ведите текст, к примеру: Проверьте пожалуйста воздух по адресу 4-я Парковая улица, 13" cols="50" rows="7"></textarea></p></p>
-                
-                <!--<p><select name="select">
-                    <option>Complaint</option>
-                    <option>Suggestion</option>
-                </select></p>-->
-
+                <p><textarea name="comment" placeholder="Ведите интересующий вас адрес" cols="50" rows="7"></textarea></p></p>
                 <p><input type="checkbox" name="a" value="согласие">Я согласен(на) на обработку персональных данных</p>
                 
                 <p>
-                    <button class="send">Отправить</button>
+                    <input class="send" type="submit" value="Отправить">
                     <button class="back_handling">
                         <a href = "<?php $name='Назад'; $link ='handling_page.php'; $current_page=true; echo $link;?>">
                         <?php if( $current_page ) echo $name;?> <!--второе включение PHP‐кода --></a>
@@ -67,3 +59,19 @@
         </footer>
     </body>
 </html>
+
+<?php
+require("connectdb.php");
+
+if($_POST["comment"] != null){//если комментарий не пустой то отправляем в бд данные
+    mysqli_query(
+        $connect,
+        "INSERT INTO handling (date, message, type, user_id) VALUES (
+            now(),
+            '" . $_POST['comment'] . "',
+            'Отправлено',
+            '" . $_SESSION['user']['id'] . "')"
+    );
+    header("Location: handling_page.php");
+}
+?>

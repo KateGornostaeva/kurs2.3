@@ -64,9 +64,6 @@
 
         // Сравниваем пароли
         if($data['password'] === $_POST['password']){
-            // Ставим куки
-            //setcookie("user_id", $data['id'], time()+60*60*24*30, "/*");
-            //setcookie("user_name", $$_POST['login'], time()+60*60*24*30, "/*");
 
             // Переадресовываем браузер на страницу проверки нашего скрипта
             session_start();

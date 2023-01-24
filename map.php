@@ -9,7 +9,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
         
-    
     <!-- стили карты -->
     <link
         rel="stylesheet"
@@ -49,8 +48,6 @@
     <div class="map_m">
       <!-- контейнер для карты -->
         <div id="map"></div>
-      <!-- кнопка для вызова функции 
-        <button id="my_position">Мое местоположение</button>-->
       <!-- наш скрипт-модуль -->
         <script src="script.js" type="module"></script>
     </div>

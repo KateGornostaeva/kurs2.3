@@ -64,16 +64,15 @@ if($_POST["login"] != null){
     $data = mysqli_fetch_assoc($query);
     
     if($data['id'] == null){
-        mysqli_query(
+        mysqli_query(//запись в бд
             $connect,
             "INSERT INTO users (name, login, password, email) VALUES (
                 '" . $_POST['name_user'] . "',
                 '" . $_POST['login'] . "',
                 '" . $_POST["password"] . "',
-                '" . $_POST['email_user'] . ")"
+                '" . $_POST['email_user'] . "')"
         );
         header("Location: login.php");
+    }
 }
-}
-
 ?>
