@@ -27,10 +27,10 @@ include("session.php");
                 </a>
             </div>
             <div class="main_header">  
-                <a href = "<?php $name='Заявки'; $link ='login.php'; $current_page=true; echo $link;?>">
+                <b><a href = "<?php $name='Заявки'; $link ='login.php'; $current_page=true; echo $link;?>">
                     <?php if( $current_page ) echo $name;?> <!--второе включение PHP‐кода -->
-                </a>
-            </div>        
+                </a></b>
+            </div>       
         </header>
 
         <div class="site_page_feedback">
