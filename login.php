@@ -58,7 +58,7 @@
     require("connectdb.php");
 
     if($_POST["login"] != null){
-        // Вытаскиваем из БД запись, у которой логин равняеться введенному
+        // Вытаскиваем из БД запись, у которой логин равняется введенному
         $query = mysqli_query($connect,"SELECT * FROM users WHERE login='" . $_POST["login"] . "' LIMIT 1");
         $data = mysqli_fetch_assoc($query);
 
